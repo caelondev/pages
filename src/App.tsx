@@ -6,6 +6,7 @@ import MainCard from "./components/MainCard/MainCard";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Terminal from "./components/Terminal/Terminal";
+import { Webring } from "./components/Webring/Webring";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Projects id="projects" />
         <CoolPeople id="cool-people" />
       </main>
+      <Webring />
       <Footer />
     </>
   );
