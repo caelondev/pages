@@ -13,7 +13,14 @@ export function Webring() {
         >
           &lsaquo;
         </button>
-        <button className={styles.button}>caelondev</button>
+        <button
+          className={styles.button}
+          onClick={() => {
+            location.href = "https://ring.stabbed.me";
+          }}
+        >
+          caelondev
+        </button>
         <button
           className={`${styles.button} ${styles.side_button}`}
           onClick={() => {
