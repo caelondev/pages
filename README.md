@@ -2,7 +2,7 @@
   <img src="./assets/caelondev-banner.png" alt="Image">
 </p>
 
-<p align="center">i'm caelon the cat :3</p>
+<h1 align="center">i'm caelon the cat :3</h1>
 
 ---
 
