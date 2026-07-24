@@ -6,8 +6,8 @@
 
 ---
 
-i like computers, they're the best!
-i enjoy writing code closer to the machine. hoomans call it 'low-level', but i think they should rename it to 'hard-level' cuz it's not as easy as a low level in a game when handling memory urself ><
+i liek compoters, they're ze best!
+me enjoy writing code closer to ze machine. hoomans call it 'low-level', but me think they should rename it to 'hard-level' cuz it's not as easy as a low level in a game when handling memory urself >_<
 
 kidding aside, i'm jericho, and i'm unemployed. you should check https://caelondev.net/ if you want to know more about me.
 
