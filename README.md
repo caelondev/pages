@@ -1,31 +1,35 @@
-# Behold...
+<p align="center">
+  <img src="./assets/caelondev-banner.png" alt="Image">
+</p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hello%2C+World!)](https://git.io/typing-svg)
+<p align="center">i'm caelon the cat :3</p>
 
-Hi, I'm caelondev. A nerdy programmer who started his journey at the age of 13
+---
 
-I liek
+i like computers, they're the best!
+i enjoy writing code closer to the machine. hoomans call it 'low-level', but i think they should rename it to 'hard-level' cuz it's not as easy as a low level in a game when handling memory urself ><
 
-- Rust
-- Go
-- TypeScript
+kidding aside, i'm jericho, and i'm unemployed. you should check https://caelondev.net/ if you want to know more about me.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=I+use+Vim+btw)](https://git.io/typing-svg)
+---
 
-More about me: https://caelondev.is-a.dev/
+here are my somewhat-cool projects
 
-# About this account
+- [garrote](https://git.caelondev.net/caelondev/garrote) - a turing-complete queue-based esoteric language written in rust (because rust is *blazingly fast*™)
 
-Most repos I made on this account are either forks of another repo or just configs... most of my projects have their own designated organization I made to keep things organized
+- [bf-rust](https://git.caelondev.net/caelondev/bf-rust) - a cool little brainfuck interpreter written in rust (again)
 
-## Stats spam
+---
 
-![stats](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=caelondev&theme=aura_dark)
+as you can see, i like rust a lot, though i'm keeping an eye on that explicit language ([zig](https://ziglang.org)). and so far, i'm liking it a lot
 
-![profile-details](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=caelondev&theme=aura_dark)
+<div align="center">
+    <img src="./88x31/zigpow.gif" alt="powered by zig">
+    <img src="./88x31/codeberg.gif" alt="codeberg">
+    <img src="./88x31/navi.gif" alt="powered by navi">
+    <img src="./88x31/linux.gif" alt="made on linux">
+</div>
 
-![most-used-language-per-repo](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=caelondev&theme=aura_dark)
-
-![top-language-by-commits](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=caelondev&theme=aura_dark)
-
-![commit-count](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=caelondev&theme=aura_dark&utcOffset=8)
+<div align="center">
+    <img src="https://count.getloli.com/@caelondev-codeberg" alt="visitor count">
+</div>
