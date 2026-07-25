@@ -1,14 +1,18 @@
 import styles from "./Webring.module.css";
 
-export function Webring() {
+interface WebringProps {
+  prev: string;
+  next: string;
+}
+
+export function Webring({ prev, next }: WebringProps) {
   return (
     <>
       <div className={styles.parent}>
         <button
           className={`${styles.button} ${styles.side_button}`}
           onClick={() => {
-            location.href =
-              "https://ring.stabbed.me/prev/from/" + location.hostname;
+            location.href = prev;
           }}
         >
           &lsaquo;
@@ -24,8 +28,7 @@ export function Webring() {
         <button
           className={`${styles.button} ${styles.side_button}`}
           onClick={() => {
-            location.href =
-              "https://ring.stabbed.me/next/from/" + location.hostname;
+            location.href = next;
           }}
         >
           &rsaquo;

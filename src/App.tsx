@@ -8,6 +8,8 @@ import Skills from "./components/Skills/Skills";
 import Terminal from "./components/Terminal/Terminal";
 import { Webring } from "./components/Webring/Webring";
 
+const OLD_DOMAIN = "caelondev.is-a.dev"; // stabring still uses my old subdomain
+
 function App() {
   return (
     <>
@@ -20,7 +22,10 @@ function App() {
         <Projects id="projects" />
         <CoolPeople id="cool-people" />
       </main>
-      <Webring />
+      <Webring
+        prev={`https://ring.stabbed.me/prev/from/${OLD_DOMAIN}`}
+        next={`https://ring.stabbed.me/next/from/${OLD_DOMAIN}`}
+      />
       <Footer />
     </>
   );
