@@ -58,6 +58,10 @@ main {
   max-width: 60ch;
   margin: 0 auto;
   margin-top: 10vh;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 hr {
@@ -74,6 +78,7 @@ hr {
   main {
     max-width: 60ch;
     margin-top: 0;
+    min-height: 0;
   }
 }
 

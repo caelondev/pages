@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer/Footer";
 import { Hero } from "../components/Hero/Hero";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
 
@@ -7,15 +8,22 @@ export function Home() {
     { to: "https://blog.caelondev.net/", name: "blog" },
     { to: "https://git.caelondev.net/", name: "codeberg" },
     { to: "/projects", name: "projects" },
-    { to: "/__clankers", name: "come here, bots" },
   ];
 
   return (
     <main>
-      <Hero />
-      {links.map((link, index) => (
-        <LinkInfo key={link.name} to={link.to} name={link.name} index={index} />
-      ))}
+      <div className="content">
+        <Hero />
+        {links.map((link, index) => (
+          <LinkInfo
+            key={link.name}
+            to={link.to}
+            name={link.name}
+            index={index}
+          />
+        ))}
+      </div>
+      <Footer />
     </main>
   );
 }

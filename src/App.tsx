@@ -8,7 +8,6 @@ function App() {
   const element = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/projects", element: <Projects /> },
-    { path: "/__clankers", element: <>empty for animations</> },
   ]);
 
   return (
