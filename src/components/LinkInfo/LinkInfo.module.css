@@ -1,0 +1,28 @@
+.linkInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.hashtag {
+  font-size: 0.8rem;
+  margin-right: 7px;
+  color: var(--primary);
+}
+
+.name {
+  font-size: 1.2rem;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.name:focus {
+  background: none;
+  text-decoration: underline dotted var(--primary);
+}
+
+.link {
+  font-size: 0.6rem;
+  color: var(--muted);
+}
