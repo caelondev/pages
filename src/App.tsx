@@ -1,12 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation, useRoutes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Projects } from "./pages/Projects";
 
 function App() {
   const location = useLocation();
   const element = useRoutes([
     { path: "/", element: <Home /> },
-    { path: "/projects", element: <Home /> },
+    { path: "/projects", element: <Projects /> },
+    { path: "/__clankers", element: <>empty for animations</> },
   ]);
 
   return (

@@ -1,0 +1,14 @@
+.back {
+  font-size: 0.8rem;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.back p:hover {
+  color: var(--primary);
+}
+
+.hr {
+  margin: 10px 0;
+  margin-bottom: 20px;
+}

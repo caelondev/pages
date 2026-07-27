@@ -1,8 +1,22 @@
 .linkInfo {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.note {
+  font-size: 0.65rem;
+  color: var(--accent2);
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.row {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  gap: 10px;
 }
 
 .hashtag {
@@ -25,4 +39,6 @@
 .link {
   font-size: 0.6rem;
   color: var(--muted);
+  text-align: right;
+  max-width: 45%;
 }

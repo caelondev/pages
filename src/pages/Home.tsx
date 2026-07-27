@@ -7,6 +7,7 @@ export function Home() {
     { to: "https://blog.caelondev.net/", name: "blog" },
     { to: "https://git.caelondev.net/", name: "codeberg" },
     { to: "/projects", name: "projects" },
+    { to: "/__clankers", name: "come here, bots" },
   ];
 
   return (
