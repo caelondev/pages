@@ -1,3 +1,4 @@
+import BlogPost from "../components/BlogPost/BlogPost";
 import { Footer } from "../components/Footer/Footer";
 import { Hero } from "../components/Hero/Hero";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
@@ -24,6 +25,7 @@ export function Home() {
             prev="https://ring.stabbed.me/prev/from/caelondev.is-a.dev"
           />
         </Webrings>
+        <BlogPost />
         {links.map((link, index) => (
           <LinkInfo
             key={link.name}
