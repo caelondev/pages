@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
     if (ref.current) {
@@ -14,11 +15,19 @@ export function Hero() {
     <div ref={ref} className={styles.hero}>
       <div className={styles.info}>
         <div className={styles.profile}>
-          <img
-            src="/caelon-cat.png"
-            alt="caelon the cat"
-            className={styles.profilePic}
-          />
+          <div className={styles.picWrapper}>
+            <div
+              className={styles.picSkeleton}
+              data-visible={!imgLoaded}
+            />
+            <img
+              src="/caelon-cat.png"
+              alt="caelon the cat"
+              className={styles.profilePic}
+              data-visible={imgLoaded}
+              onLoad={() => setImgLoaded(true)}
+            />
+          </div>
 
           <p className={styles.desc}>
             hello! i'm Jericho, also known as caelon, a back-end and a systems
@@ -32,3 +41,4 @@ export function Hero() {
     </div>
   );
 }
+

@@ -12,10 +12,50 @@
   gap: 15px;
 }
 
+.picWrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.picSkeleton {
+  position: absolute;
+  inset: 0;
+  border-radius: 25%;
+  background: var(--border, #2a201c);
+  animation: pulse 1.4s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+
+.picSkeleton[data-visible="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 .profilePic {
+  position: absolute;
+  inset: 0;
   width: 100px;
   height: 100px;
   border-radius: 25%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.profilePic[data-visible="true"] {
+  opacity: 1;
 }
 
 .desc {
