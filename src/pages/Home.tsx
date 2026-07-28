@@ -1,6 +1,8 @@
 import { Footer } from "../components/Footer/Footer";
 import { Hero } from "../components/Hero/Hero";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
+import { Webring } from "../components/Webring/Webring";
+import { Webrings } from "../components/Webrings/Webrings";
 
 export function Home() {
   const links = [
@@ -14,6 +16,14 @@ export function Home() {
     <main>
       <div className="content">
         <Hero />
+        <Webrings>
+          <Webring
+            name="stabring"
+            link="https://ring.stabbed.me"
+            next="https://ring.stabbed.me/next/from/caelondev.is-a.dev"
+            prev="https://ring.stabbed.me/prev/from/caelondev.is-a.dev"
+          />
+        </Webrings>
         {links.map((link, index) => (
           <LinkInfo
             key={link.name}

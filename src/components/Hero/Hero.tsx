@@ -29,7 +29,6 @@ export function Hero() {
           <p className={styles.name}>caelon the cat</p>
         </div>
       </div>
-      <hr />
     </div>
   );
 }

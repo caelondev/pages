@@ -1,0 +1,13 @@
+.topHr, .bottomHr {
+  margin: 0;
+}
+
+.topHr {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.bottomHr {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
