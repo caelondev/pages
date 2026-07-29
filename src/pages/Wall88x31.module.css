@@ -1,0 +1,43 @@
+.wall88x31 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.wall88x31 h1 {
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 88px);
+  gap: 8px;
+  justify-content: center;
+}
+
+.skeleton {
+  margin: 50px auto 0;
+  width: 60vw;
+  max-width: 600px;
+  height: 200px;
+  border-radius: 2rem;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 116, 63, 0.08) 25%,
+    rgba(232, 116, 63, 0.18) 37%,
+    rgba(232, 116, 63, 0.08) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
