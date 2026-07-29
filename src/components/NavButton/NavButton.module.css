@@ -1,0 +1,12 @@
+.link {
+  padding: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: var(--bg-card3);
+  padding: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+}

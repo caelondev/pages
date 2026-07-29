@@ -4,13 +4,13 @@ import { Hero } from "../components/Hero/Hero";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
 import { Webring } from "../components/Webring/Webring";
 import { Webrings } from "../components/Webrings/Webrings";
+import "./Hero.module.css";
 
 export function Home() {
   const links = [
     { to: "mailto:me@caelondev.net", name: "email" },
     { to: "https://blog.caelondev.net/", name: "blog" },
     { to: "https://git.caelondev.net/", name: "codeberg" },
-    { to: "/projects", name: "projects" },
   ];
 
   return (

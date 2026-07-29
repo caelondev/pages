@@ -1,6 +1,5 @@
-import { Back } from "../components/Back/Back";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
-import styles from "./Projects.module.css"
+import styles from "./Projects.module.css";
 
 export function Projects() {
   const links = [
@@ -32,7 +31,6 @@ export function Projects() {
 
   return (
     <main className={styles.main}>
-      <Back />
       {links.map((link, index) => (
         <LinkInfo
           key={`${link.name}-${index}`}
