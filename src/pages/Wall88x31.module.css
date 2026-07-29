@@ -23,3 +23,10 @@
     width: 60vw;
   }
 }
+
+.loading {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--fg-muted);
+}
