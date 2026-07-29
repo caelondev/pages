@@ -10,7 +10,6 @@ async function fetch88x31Paths(url: string): Promise<string[]> {
 
 export function Wall88x31() {
   const [gifs, setGifs] = useState<string[]>([]);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     let objectUrls: string[] = [];
@@ -33,7 +32,6 @@ export function Wall88x31() {
         );
 
         setGifs(urls);
-        setLoaded(true);
       } catch (err) {
         console.error(err);
       }
@@ -50,24 +48,20 @@ export function Wall88x31() {
     <div className={styles.wall88x31}>
       <h1>The 88x31 Wall</h1>
 
-      {!loaded && <div className={styles.skeleton} />}
-
-      {loaded && (
-        <div className={styles.container}>
-          {gifs.map((gif, i) => (
-            <motion.img
-              key={i}
-              src={gif}
-              width={88}
-              height={31}
-              alt=""
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut", delay: i * 0.1 }}
-            />
-          ))}
-        </div>
-      )}
+      <div className={styles.container}>
+        {gifs.map((gif, i) => (
+          <motion.img
+            key={i}
+            src={gif}
+            width={88}
+            height={31}
+            alt=""
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: i * 0.1 }}
+          />
+        ))}
+      </div>
     </div>
   );
 }

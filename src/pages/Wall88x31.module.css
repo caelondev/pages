@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 60vw;
+  width: 100%;
+  align-self: center;
 }
 
 .wall88x31 h1 {
@@ -17,27 +18,8 @@
   justify-content: center;
 }
 
-.skeleton {
-  margin: 50px auto 0;
-  width: 60vw;
-  max-width: 600px;
-  height: 200px;
-  border-radius: 2rem;
-  background: linear-gradient(
-    90deg,
-    rgba(232, 116, 63, 0.08) 25%,
-    rgba(232, 116, 63, 0.18) 37%,
-    rgba(232, 116, 63, 0.08) 63%
-  );
-  background-size: 400% 100%;
-  animation: shimmer 1.4s ease infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0 0;
+@media (min-width: 769px) {
+  .wall88x31 {
+    width: 60vw;
   }
 }
