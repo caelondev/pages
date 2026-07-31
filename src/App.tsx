@@ -5,6 +5,7 @@ import { Projects } from "./pages/Projects";
 import { NavButton } from "./components/NavButton/NavButton";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Wall88x31 } from "./pages/Wall88x31";
+import { Misc } from "./pages/Misc";
 
 function App() {
   const location = useLocation();
@@ -12,6 +13,7 @@ function App() {
     { path: "/", element: <Home /> },
     { path: "/projects", element: <Projects /> },
     { path: "/88x31", element: <Wall88x31 /> },
+    { path: "/misc", element: <Misc /> },
   ]);
 
   return (
@@ -20,6 +22,7 @@ function App() {
         <NavButton name="home" to="/" />
         <NavButton name="projects" to="/projects" />
         <NavButton name="88x31" to="/88x31" />
+        <NavButton name="misc" to="/misc" />
       </NavBar>
       <AnimatePresence mode="wait">
         {element && (

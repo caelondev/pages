@@ -1,0 +1,134 @@
+.musicInfo {
+  background: var(--card-bg, #17110d);
+  border: 1px solid var(--border, #2a1f18);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.status {
+  font-size: 0.7rem;
+  color: var(--dim, #6b5d54);
+}
+
+.status.live::before {
+  content: "\25CF ";
+  color: var(--primary, #e8743f);
+}
+
+.track {
+  color: #e8dfd6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.track:hover {
+  color: var(--primary, #e8743f);
+  text-decoration: underline;
+}
+
+.scrobbledAt {
+  color: var(--dim, #6b5d54);
+}
+
+.artist {
+  color: var(--dim, #6b5d54);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  margin-top: 0.4rem;
+  background: var(--border, #2a1f18);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.progress::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--border, #2a1f18);
+  border-radius: 2px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.progress::-moz-range-track {
+  height: 3px;
+  background: var(--border, #2a1f18);
+  border-radius: 2px;
+}
+
+.progress::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.progress::-moz-range-progress {
+  background: var(--primary, #e8743f);
+  height: 3px;
+  border-radius: 2px;
+}
+
+.skeleton {
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--border, #2a1f18) 25%,
+    #3a2c22 50%,
+    var(--border, #2a1f18) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.skeletonStatus {
+  width: 30%;
+  height: 0.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.skeletonTrack {
+  width: 65%;
+  height: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.skeletonArtist {
+  width: 45%;
+  height: 0.8rem;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

@@ -1,0 +1,31 @@
+.heatMap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-card);
+}
+
+/* Chrome/Safari/Edge (WebKit) */
+.heatMap::-webkit-scrollbar {
+  height: 8px;
+}
+
+.heatMap::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.heatMap::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.heatMap::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+p {
+  color: var(--primary);
+}
