@@ -4,20 +4,37 @@ import styles from "./MusicInfo.module.css";
 interface TrackInfo {
   track: string;
   artist: string;
+  album: string | null;
   isPlaying: boolean;
   url: string;
   scrobbledAt: string | null;
+  scrobbledAtUts: number | null;
+}
+
+interface LastfmMeta {
+  totalScrobbles: number | null;
+}
+
+function timeAgo(uts: number | null): string | null {
+  if (!uts) return null;
+  const diff = Date.now() / 1000 - uts;
+  if (diff < 60) return "just now";
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  return `${Math.floor(diff / 86400)}d ago`;
 }
 
 export function MusicInfo() {
   const [info, setInfo] = useState<TrackInfo | null>(null);
   const infoRef = useRef<TrackInfo | null>(null);
+  const [meta, setMeta] = useState<LastfmMeta>({ totalScrobbles: null });
   const [status, setStatus] = useState("loading...");
   const [loading, setLoading] = useState(true);
   const loadingRef = useRef(true);
   const [progress, setProgress] = useState(0);
   const progressRef = useRef<number>(0);
   const prevTrackRef = useRef<{ track: string; artist: string } | null>(null);
+  const [, forceTick] = useState(0);
 
   function updateLoading(value: boolean) {
     loadingRef.current = value;
@@ -32,8 +49,11 @@ export function MusicInfo() {
         const res = await fetch("https://api.caelondev.net/lastfm");
         const data = await res.json();
         const track = data.recenttracks?.track?.[0];
+        const total = data.recenttracks?.["@attr"]?.total;
 
         if (cancelled) return;
+
+        setMeta({ totalScrobbles: total ? parseInt(total, 10) : null });
 
         if (!track) {
           setStatus("no listens yet");
@@ -49,12 +69,16 @@ export function MusicInfo() {
 
         setStatus(isPlaying ? "now playing" : "last played");
 
+        const albumName = track.album?.["#text"]?.trim() || null;
+
         const nextInfo: TrackInfo = {
           track: track.name,
           artist: track.artist["#text"],
+          album: albumName,
           isPlaying,
           url: track.url,
           scrobbledAt: track.date?.["#text"] ?? null,
+          scrobbledAtUts: track.date?.uts ? parseInt(track.date.uts, 10) : null,
         };
         setInfo(nextInfo);
         infoRef.current = nextInfo;
@@ -104,6 +128,7 @@ export function MusicInfo() {
 
     pollLoop();
 
+    // ticks the progress bar (only relevant while playing)
     const tick = setInterval(() => {
       if (loadingRef.current) return;
       if (document.visibilityState !== "visible") return;
@@ -111,12 +136,22 @@ export function MusicInfo() {
       setProgress(progressRef.current);
     }, 1500);
 
+    // ticks the "Xm ago" relative label for non-playing tracks
+    const agoTick = setInterval(() => {
+      if (document.visibilityState !== "visible") return;
+      forceTick((n) => n + 1);
+    }, 30000);
+
     return () => {
       cancelled = true;
       clearTimeout(pollTimeout);
       clearInterval(tick);
+      clearInterval(agoTick);
     };
   }, []);
+
+  const relativeTime =
+    info && !info.isPlaying ? timeAgo(info.scrobbledAtUts) : null;
 
   return (
     <div className={styles.musicInfo}>
@@ -129,17 +164,21 @@ export function MusicInfo() {
           </>
         ) : (
           <>
-            <div
-              className={`${styles.status} ${
-                info?.isPlaying ? styles.live : ""
-              }`}
-            >
-              {status}
-              {!info?.isPlaying && info?.scrobbledAt && (
-                <span className={styles.scrobbledAt}>
-                  {" "}
-                  · {info.scrobbledAt}
-                </span>
+            <div className={styles.topRow}>
+              <div
+                className={`${styles.status} ${
+                  info?.isPlaying ? styles.live : ""
+                }`}
+              >
+                {status}
+                {relativeTime && (
+                  <span className={styles.scrobbledAt}> · {relativeTime}</span>
+                )}
+              </div>
+              {meta.totalScrobbles !== null && (
+                <div className={styles.scrobbleCount}>
+                  {meta.totalScrobbles.toLocaleString()} scrobbles
+                </div>
               )}
             </div>
             <a
@@ -150,18 +189,25 @@ export function MusicInfo() {
             >
               {info?.track ?? "--"}
             </a>
-            <div className={styles.artist}>{info?.artist ?? "--"}</div>
+            <div className={styles.artist}>
+              {info?.artist ?? "--"}
+              {info?.album && (
+                <span className={styles.album}> — {info.album}</span>
+              )}
+            </div>
           </>
         )}
-        <input
-          className={styles.progress}
-          type="range"
-          min={0}
-          max={100}
-          value={progress}
-          readOnly
-          tabIndex={-1}
-        />
+        {!loading && info?.isPlaying && (
+          <input
+            className={styles.progress}
+            type="range"
+            min={0}
+            max={100}
+            value={progress}
+            readOnly
+            tabIndex={-1}
+          />
+        )}
       </div>
     </div>
   );

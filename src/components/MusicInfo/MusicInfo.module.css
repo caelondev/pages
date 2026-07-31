@@ -18,14 +18,33 @@
   flex: 1;
 }
 
+.topRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .status {
   font-size: 0.7rem;
   color: var(--dim, #6b5d54);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .status.live::before {
-  content: "\25CF ";
+  content: "\25CF";
+  margin-right: 10px;
   color: var(--primary, #e8743f);
+}
+
+.scrobbleCount {
+  font-size: 0.65rem;
+  color: var(--dim, #6b5d54);
+  opacity: 0.7;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .track {
@@ -51,6 +70,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.album {
+  opacity: 0.75;
 }
 
 .progress {
