@@ -138,16 +138,7 @@ export function JokeCard({ defaultCategory = "Programming" }: JokeCardProps) {
         {!loading && !error && joke?.type === "twopart" && (
           <>
             <p className={styles.text}>{joke.setup}</p>
-            {revealed ? (
-              <p className={styles.delivery}>{joke.delivery}</p>
-            ) : (
-              <button
-                className={styles.reveal}
-                onClick={() => setRevealed(true)}
-              >
-                show punchline
-              </button>
-            )}
+            {revealed && <p className={styles.delivery}>{joke.delivery}</p>}
           </>
         )}
       </div>
@@ -177,13 +168,20 @@ export function JokeCard({ defaultCategory = "Programming" }: JokeCardProps) {
         </div>
       )}
 
-      <button
-        className={styles.reroll}
-        onClick={() => fetchJoke(category)}
-        disabled={loading}
-      >
-        another one
-      </button>
+      <div className={styles.buttonRow}>
+        <button
+          className={styles.reroll}
+          onClick={() => fetchJoke(category)}
+          disabled={loading}
+        >
+          another one
+        </button>
+        {!loading && !error && joke?.type === "twopart" && !revealed && (
+          <button className={styles.reveal} onClick={() => setRevealed(true)}>
+            show punchline
+          </button>
+        )}
+      </div>
     </div>
   );
 }

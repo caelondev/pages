@@ -53,8 +53,8 @@
 
 .reveal {
   background: none;
-  border: 1px dashed var(--border, #2a1f18);
-  color: var(--dim, #6b5d54);
+  border: 1px solid var(--primary);
+  color: var(--primary);
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
   font-family: inherit;
@@ -63,8 +63,8 @@
 }
 
 .reveal:hover {
-  border-color: var(--primary, #e8743f);
-  color: var(--primary, #e8743f);
+  border-color: var(--muted);
+  color: var(--muted);
 }
 
 .metaRow {
@@ -120,8 +120,8 @@
 .reroll {
   align-self: flex-start;
   background: none;
-  border: 1px solid var(--border, #2a1f18);
-  color: var(--dim, #6b5d54);
+  border: 1px solid var(--primary);
+  color: var(--primary);
   border-radius: 4px;
   padding: 0.25rem 0.6rem;
   font-family: inherit;
@@ -130,11 +130,16 @@
 }
 
 .reroll:hover:not(:disabled) {
-  border-color: var(--primary, #e8743f);
-  color: var(--primary, #e8743f);
+  border-color: var(--muted);
+  color: var(--muted);
 }
 
 .reroll:disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
 }
