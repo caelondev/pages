@@ -128,7 +128,6 @@ export function MusicInfo() {
 
     pollLoop();
 
-    // ticks the progress bar (only relevant while playing)
     const tick = setInterval(() => {
       if (loadingRef.current) return;
       if (document.visibilityState !== "visible") return;
@@ -136,7 +135,6 @@ export function MusicInfo() {
       setProgress(progressRef.current);
     }, 1500);
 
-    // ticks the "Xm ago" relative label for non-playing tracks
     const agoTick = setInterval(() => {
       if (document.visibilityState !== "visible") return;
       forceTick((n) => n + 1);
@@ -175,11 +173,14 @@ export function MusicInfo() {
                   <span className={styles.scrobbledAt}> · {relativeTime}</span>
                 )}
               </div>
-              {meta.totalScrobbles !== null && (
-                <div className={styles.scrobbleCount}>
-                  {meta.totalScrobbles.toLocaleString()} scrobbles
-                </div>
-              )}
+              <div className={styles.rightMeta}>
+                {meta.totalScrobbles !== null && (
+                  <div className={styles.scrobbleCount}>
+                    {meta.totalScrobbles.toLocaleString()} scrobbles
+                  </div>
+                )}
+                <div className={styles.source}>YT Music</div>
+              </div>
             </div>
             <a
               className={styles.track}

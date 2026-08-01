@@ -7,11 +7,11 @@ interface HeatMapProps {
 
 export function HeatMap({ from, title }: HeatMapProps) {
   return (
-    <>
-      <p>{title ? title : ""}</p>
+    <div className={styles.wrapper}>
+      {title && <p className={styles.label}>{title}</p>}
       <div className={styles.heatMap}>
-        <img src={from} />
+        <img src={from} alt={title ?? "Heat map"} className={styles.image} />
       </div>
-    </>
+    </div>
   );
 }

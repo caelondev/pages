@@ -1,10 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-family: var(--font-mono, "Space Mono", monospace);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0;
+}
+
 .heatMap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  background: var(--bg-card);
+  padding: 0.3rem;
 
   /* Firefox */
   scrollbar-width: thin;
   scrollbar-color: var(--primary) var(--bg-card);
+}
+
+.heatMap img {
+  width: 100%;
+}
+
+.image {
+  display: block;
+  height: auto;
+  max-width: none;
+  border-radius: 3px;
 }
 
 /* Chrome/Safari/Edge (WebKit) */
@@ -24,8 +54,4 @@
 
 .heatMap::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
-}
-
-p {
-  color: var(--primary);
 }

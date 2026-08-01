@@ -1,0 +1,140 @@
+.jokeCard {
+  background: var(--bg-card, #17110d);
+  border: 1px solid var(--border, #2a1f18);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--dim, #6b5d54);
+}
+
+.select {
+  background: var(--bg-card, #17110d);
+  color: var(--primary, #e8743f);
+  border: 1px solid var(--border, #2a1f18);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+}
+
+.body {
+  min-height: 2.5rem;
+}
+
+.status {
+  color: var(--dim, #6b5d54);
+}
+
+.text {
+  color: #e8dfd6;
+  margin: 0 0 0.5rem;
+}
+
+.delivery {
+  color: var(--primary, #e8743f);
+  margin: 0;
+}
+
+.reveal {
+  background: none;
+  border: 1px dashed var(--border, #2a1f18);
+  color: var(--dim, #6b5d54);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.reveal:hover {
+  border-color: var(--primary, #e8743f);
+  color: var(--primary, #e8743f);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dim, #6b5d54);
+  border: 1px solid var(--border, #2a1f18);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+}
+
+.safe {
+  color: #7fb37f;
+  border-color: #2f4a2f;
+}
+
+.unsafe {
+  color: #c96a5a;
+  border-color: #4a2f2a;
+}
+
+.idTag {
+  font-size: 0.6rem;
+  color: var(--dim, #6b5d54);
+  opacity: 0.6;
+  margin-left: auto;
+}
+
+.flagsRow {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.flag {
+  font-size: 0.55rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary, #e8743f);
+  background: rgba(232, 116, 63, 0.1);
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+}
+
+.reroll {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--border, #2a1f18);
+  color: var(--dim, #6b5d54);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.reroll:hover:not(:disabled) {
+  border-color: var(--primary, #e8743f);
+  color: var(--primary, #e8743f);
+}
+
+.reroll:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
