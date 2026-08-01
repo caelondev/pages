@@ -8,6 +8,7 @@ export function Misc() {
       <h1 className={styles.header}>More random infos</h1>
 
       <MusicInfo />
+      <hr />
       <HeatMap
         title="codeberg heatmap :3"
         from={
