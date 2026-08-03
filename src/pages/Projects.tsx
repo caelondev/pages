@@ -4,9 +4,9 @@ import styles from "./Projects.module.css";
 export function Projects() {
   const links = [
     {
-      name: "bf-rust",
-      desc: "a brainf*ck interpreter written in rust",
-      to: "https://codeberg.org/caelondev/bf-rust",
+      name: "brainfuzz",
+      desc: "a brainf*ck interpreter written in zig",
+      to: "https://codeberg.org/caelondev/brainfuzz",
       note: "inactive",
     },
     {
