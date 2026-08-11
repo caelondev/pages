@@ -4,6 +4,12 @@ import styles from "./Projects.module.css";
 export function Projects() {
   const links = [
     {
+      name: "cael-16",
+      desc: "a 16-bit cpu emulator with its own ISA",
+      to: "https://codeberg.org/caelondev/cael-16",
+      note: "inactive",
+    },
+    {
       name: "brainfuzz",
       desc: "a brainf*ck interpreter written in zig",
       to: "https://codeberg.org/caelondev/brainfuzz",
