@@ -12,7 +12,6 @@ export function Footer() {
   }, []);
   return (
     <footer className={styles.footer} ref={ref}>
-      <a href="/__clankers/">come here, bots</a>
       <div className={styles.webring}>
         <Webrings>
           <Webring
@@ -23,6 +22,7 @@ export function Footer() {
           />
         </Webrings>
       </div>
+      <a href="/__clankers/">come here, bots</a>
     </footer>
   );
 }

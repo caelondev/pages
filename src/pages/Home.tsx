@@ -1,4 +1,3 @@
-import { LinkInfo } from "../components/LinkInfo/LinkInfo";
 import styles from "./Home.module.css";
 
 export function Home() {
@@ -9,9 +8,9 @@ export function Home() {
       <hr />
       <div className={styles.parent}>
         <div className={styles.links}>
-          <LinkInfo to="mailto:me@caelondev.net" name="email" />
-          <LinkInfo to="https://blog.caelondev.net/" name="blog" />
-          <LinkInfo to="https://git.caelondev.net/" name="codeberg" />
+          <a href="mailto:me@caelondev.net">email</a>
+          <a href="https://blog.caelondev.net/">blog</a>
+          <a href="https://git.caelondev.net/">codeberg</a>
         </div>
 
         <article className={styles.story}>
