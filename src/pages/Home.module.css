@@ -1,3 +1,91 @@
 main {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+}
+
+.parent {
+  max-height: 70vh;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+  .parent {
+    max-height: 25vh;
+    max-width: 70vw;
+    overflow-y: auto;
+    padding-bottom: 0;
+  }
+}
+
+h1 {
+  color: var(--primary);
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: 10px; /* very unlikely but just incase the screen is too small (or font too big) */
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  line-height: 0.4;
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0 10px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--fg);
+}
+
+.story p {
+  margin: 0;
+}
+
+.command {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--terminal-ok);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: -4px 0;
+}
+
+.quote {
+  margin: 0;
+  padding: 14px 20px;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-card);
+  border-radius: 0 var(--card-border-radius) var(--card-border-radius) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--accent2);
 }

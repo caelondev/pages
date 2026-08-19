@@ -1,44 +1,16 @@
-.linkInfo {
+.links {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 12px;
-}
-
-.note {
-  font-size: 0.65rem;
-  color: var(--accent2);
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
-  gap: 10px;
-}
-
-.hashtag {
-  font-size: 0.8rem;
-  margin-right: 7px;
-  color: var(--primary);
-}
-
-.name {
-  font-size: 1.2rem;
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-}
-
-.name:focus {
-  background: none;
-  text-decoration: underline dotted var(--primary);
 }
 
 .link {
-  font-size: 0.7rem;
-  color: var(--muted);
-  text-align: right;
-  max-width: 45%;
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--primary);
 }
