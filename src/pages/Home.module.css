@@ -17,7 +17,7 @@ main {
 
 @media (min-width: 769px) {
   .parent {
-    max-height: 25vh;
+    max-height: 15vh;
     max-width: 70vw;
     overflow-y: auto;
     padding-bottom: 0;
@@ -87,5 +87,6 @@ hr {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.08rem;
+  font-weight: bold;
   color: var(--accent2);
 }

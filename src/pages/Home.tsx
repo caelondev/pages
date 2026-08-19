@@ -4,10 +4,10 @@ import styles from "./Home.module.css";
 export function Home() {
   return (
     <main>
+      <h1 className={styles.title}>caelon</h1>
+      <p className={styles.subtitle}>systems programmer</p>
+      <hr />
       <div className={styles.parent}>
-        <h1 className={styles.title}>caelon</h1>
-        <p className={styles.subtitle}>systems programmer</p>
-        <hr />
         <div className={styles.links}>
           <LinkInfo to="mailto:me@caelondev.net" name="email" />
           <LinkInfo to="https://blog.caelondev.net/" name="blog" />
