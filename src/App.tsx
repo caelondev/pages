@@ -6,6 +6,7 @@ import { NavButton } from "./components/NavButton/NavButton";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Wall88x31 } from "./pages/Wall88x31";
 import { Misc } from "./pages/Misc";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
             {element}
           </motion.div>
         )}
+        <Footer />
       </AnimatePresence>
     </>
   );

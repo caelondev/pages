@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import styles from "./Webring.module.css";
 
 interface WebringProps {
@@ -10,12 +10,6 @@ interface WebringProps {
 
 export function Webring({ name, prev, next, link }: WebringProps) {
   const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.style.animation = `slideUp 0.6s ease-out`;
-    }
-  }, []);
 
   let nameTag =
     link != null ? (
