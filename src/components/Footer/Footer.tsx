@@ -21,9 +21,9 @@ export function Footer() {
           <Webrings>
             <Webring
               name="horsering"
-              prev="https://horser.ing/prev/caelondev"
+              prev="https://horser.ing/prev/caelon"
               link="https://horser.ing/"
-              next="https://horser.ing/next/caelondev"
+              next="https://horser.ing/next/caelon"
             />
           </Webrings>
         </div>
