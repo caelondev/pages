@@ -3,7 +3,7 @@ import styles from "./CarouselHeader.module.css";
 
 interface CarouselHeaderProps {
   msg: string;
-  className: string;
+  className?: string;
 }
 
 export function CarouselHeader({ msg, className }: CarouselHeaderProps) {
@@ -18,7 +18,7 @@ export function CarouselHeader({ msg, className }: CarouselHeaderProps) {
   };
 
   return (
-    <h1 className={`${className} ${styles.carouselHeader}`} onClick={onClick}>
+    <h1 className={`${className ?? ""} ${styles.carouselHeader}`} onClick={onClick}>
       {text}
     </h1>
   );

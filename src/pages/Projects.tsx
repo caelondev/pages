@@ -1,8 +1,15 @@
+import { CarouselHeader } from "../components/CarouselHeader/CarouselHeader";
 import { LinkInfo } from "../components/LinkInfo/LinkInfo";
 import styles from "./Projects.module.css";
 
 export function Projects() {
   const links = [
+    {
+      name: "zenv",
+      desc: "a .env manager made to easily deal with .env files",
+      to: "https://codeberg.org/caelondev/zenv",
+      note: "active",
+    },
     {
       name: "cael-16",
       desc: "a 16-bit cpu emulator with its own ISA",
@@ -37,6 +44,12 @@ export function Projects() {
 
   return (
     <main className={styles.main}>
+      <CarouselHeader msg="Projects" className={styles.header} />
+      <article className={styles.article}>
+        <p>these are some of the projects i've worked on in my freetime.</p>
+
+        <p>not that many, but they're pretty useful to me.</p>
+      </article>
       {links.map((link, index) => (
         <LinkInfo
           key={`${link.name}-${index}`}

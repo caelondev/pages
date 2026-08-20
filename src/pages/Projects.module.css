@@ -1,5 +1,16 @@
 .main {
   width: 80vw;
   min-height: 0;
-  margin-top: 50px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
