@@ -14,7 +14,7 @@ export function Wall88x31() {
   const [gifs, setGifs] = useState<string[]>([]);
   const [loaded, setLoaded] = useState(false);
   const [emoticon] = useState(
-    () => EMOTICONS[Math.floor(Math.random() * EMOTICONS.length)]
+    () => EMOTICONS[Math.floor(Math.random() * EMOTICONS.length)],
   );
 
   useEffect(() => {
@@ -54,10 +54,19 @@ export function Wall88x31() {
   return (
     <div className={styles.wall88x31}>
       <h1>The 88x31 Wall</h1>
+      <article>
+        <p>
+          i find these buttons kind of cool, especially if you know the history
+          behind them.
+        </p>
 
-      {!loaded && (
-        <p className={styles.loading}>Loading {emoticon}</p>
-      )}
+        <p>
+          consider this page a memorial area for these buttons. (no, you can't
+          click them)
+        </p>
+      </article>
+
+      {!loaded && <p className={styles.loading}>Loading {emoticon}</p>}
 
       {loaded && (
         <div className={styles.container}>
