@@ -1,0 +1,7 @@
+.carouselHeader {
+  display: inline-block;
+}
+
+.carouselHeader:hover {
+  text-decoration: underline 1px solid var(--primary);
+}

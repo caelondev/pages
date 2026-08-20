@@ -12,6 +12,7 @@ export function Footer() {
   }, []);
   return (
     <footer className={styles.footer} ref={ref}>
+      <hr />
       <div className={styles.webring}>
         <Webrings>
           <Webring

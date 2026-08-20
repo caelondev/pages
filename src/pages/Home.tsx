@@ -1,9 +1,10 @@
+import { CarouselHeader } from "../components/CarouselHeader/CarouselHeader";
 import styles from "./Home.module.css";
 
 export function Home() {
   return (
     <main>
-      <h1 className={styles.title}>caelon</h1>
+      <CarouselHeader msg="caelon" className={styles.title} />
       <p className={styles.subtitle}>systems programmer</p>
       <hr />
       <div className={styles.parent}>
@@ -72,8 +73,8 @@ export function Home() {
 
           <p>
             i started with python, then got absolutely bamboozled with
-            information and burned out pretty quickly because i couldn't really
-            see my progress.
+            information and burned out pretty quickly because i couldn't
+            visually see my progress.
           </p>
 
           <p>so i moved on to web development.</p>
@@ -129,8 +130,6 @@ export function Home() {
 
           <p>here i am right now.</p>
 
-          <p>the caelon everyone knows.</p>
-
           <p>
             the first language i started with in systems programming was Rust.
             yes, i know. pretty brutal choice.
@@ -140,7 +139,7 @@ export function Home() {
 
           <p>
             and somehow, that kid who just wanted to mess around with a weird
-            block in minecraft ended up here.
+            block in minecraft ended up becoming a systems programmer.
           </p>
         </article>
       </div>
