@@ -50,16 +50,18 @@ export function Projects() {
 
         <p>not that many, but they're pretty useful to me.</p>
       </article>
-      {links.map((link, index) => (
-        <LinkInfo
-          key={`${link.name}-${index}`}
-          desc={link.desc}
-          to={link.to}
-          name={link.name}
-          note={link.note}
-          index={index}
-        />
-      ))}
+      <div className={styles.projects}>
+        {links.map((link, index) => (
+          <LinkInfo
+            key={`${link.name}-${index}`}
+            desc={link.desc}
+            to={link.to}
+            name={link.name}
+            note={link.note}
+            index={index}
+          />
+        ))}
+      </div>
     </main>
   );
 }

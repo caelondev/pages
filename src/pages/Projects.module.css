@@ -3,6 +3,10 @@
   min-height: 0;
 }
 
+.projects {
+  overflow-y: auto;
+}
+
 .header {
   text-align: center;
   margin-bottom: 10px;
