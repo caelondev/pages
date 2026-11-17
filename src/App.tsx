@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation, useRoutes } from "react-router-dom";
+import { Journey } from "./pages/Journey";
 import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
 import { NavButton } from "./components/NavButton/NavButton";
@@ -12,6 +13,7 @@ function App() {
   const location = useLocation();
   const element = useRoutes([
     { path: "/", element: <Home /> },
+    { path: "/journey", element: <Journey /> },
     { path: "/projects", element: <Projects /> },
     { path: "/88x31", element: <Wall88x31 /> },
     { path: "/misc", element: <Misc /> },
@@ -21,6 +23,7 @@ function App() {
     <>
       <NavBar>
         <NavButton name="home" to="/" />
+        <NavButton name="journey" to="/journey" />
         <NavButton name="projects" to="/projects" />
         <NavButton name="88x31" to="/88x31" />
         <NavButton name="misc" to="/misc" />

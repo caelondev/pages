@@ -5,27 +5,33 @@ import styles from "./Projects.module.css";
 export function Projects() {
   const links = [
     {
+      name: "iglot",
+      desc: "a statically-typed, register-based programming language",
+      to: "https://git.caelondev.net/repos/iglot",
+      note: "active",
+    },
+    {
       name: "zenv",
       desc: "a .env manager made to easily deal with .env files",
-      to: "https://codeberg.org/caelondev/zenv",
-      note: "active",
+      to: "https://git.caelondev.net/repos/zenv",
+      note: "inactive",
     },
     {
       name: "cael-16",
       desc: "a 16-bit cpu emulator with its own ISA",
-      to: "https://codeberg.org/caelondev/cael-16",
+      to: "https://git.caelondev.net/repos/cael-16",
       note: "inactive",
     },
     {
       name: "brainfuzz",
       desc: "a brainf*ck interpreter written in zig",
-      to: "https://codeberg.org/caelondev/brainfuzz",
+      to: "https://git.caelondev.net/repos/brainfuzz",
       note: "inactive",
     },
     {
       name: "garrote",
       desc: "a queue-based esolang written in rust",
-      to: "https://codeberg.org/caelondev/garrote",
+      to: "https://git.caelondev.net/repos/garrote",
       note: "inactive",
     },
     {

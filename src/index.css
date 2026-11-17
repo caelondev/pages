@@ -48,7 +48,7 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg);
   padding: 2rem;
 }
@@ -59,7 +59,7 @@ main {
   overflow-x: hidden;
   margin: 0 auto;
   display: flex;
-  height: 75vh;
+  height: 75dvh;
   flex-direction: column;
   justify-content: space-between;
 }

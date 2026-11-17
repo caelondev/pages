@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./LinkInfo.module.css";
 
-interface LinkInfoProps {
+export interface LinkInfoProps {
   to: string;
   name: string;
   desc?: string;
