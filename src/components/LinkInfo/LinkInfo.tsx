@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import styles from "./LinkInfo.module.css";
 
 export interface LinkInfoProps {
@@ -36,9 +35,9 @@ export function LinkInfo({ to, name, desc, note, index }: LinkInfoProps) {
               <span>{name}</span>
             </a>
           ) : (
-            <Link to={to} className={styles.name}>
+            <a href={to} className={styles.name}>
               <span>{name}</span>
-            </Link>
+            </a>
           )}
         </span>
         <span className={styles.link}>{desc != null ? desc : to}</span>
